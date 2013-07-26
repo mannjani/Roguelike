@@ -13,9 +13,9 @@ var Game =
 		this.statDisplay = new ROT.Display({height: 4});
 		this.width = this.display.getOptions().width;
 		this.height = this.display.getOptions().height;
-		document.body.appendChild(this.messageDisplay.getContainer());
-		document.body.appendChild(this.display.getContainer());
-		document.body.appendChild(this.statDisplay.getContainer());
+		document.getElementById("GameWindow").appendChild(this.messageDisplay.getContainer());
+		document.getElementById("GameWindow").appendChild(this.display.getContainer());
+		document.getElementById("GameWindow").appendChild(this.statDisplay.getContainer());
 		this.player = new Actor(Actor.PlayerTemplate);
 	},
 	switchScreen: function(show, dLevel) {
